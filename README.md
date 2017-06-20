@@ -1,4 +1,4 @@
-# C89 compiler (by Martin Ferianc mf2915)
+# C89 compiler
 
 This is repo containing the attempt to build a C89 compiler into a MIPS1 ISA
 
