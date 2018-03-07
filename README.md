@@ -3,7 +3,7 @@ This is a C90 (ANSI C) to MIPS compiler. The compiler uses Flex for the lexer, B
 
 The repository also contains parser and lexer in separate directories under the `/src` directory. It also contains a plenty of test for all three programs. 
 
-More information on the design of the compiler can be seen in the [docs](/docs/README.md).
+More information on the design of the compiler can be seen in the [docs](/doc/README.md).
 
 ## Specification
 This piece of work was done in partial fulfilment of a language processors module. The specification for the coursework can be found [here](https://github.com/LangProc/langproc-2016-cw).
