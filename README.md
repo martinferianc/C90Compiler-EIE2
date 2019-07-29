@@ -1,12 +1,12 @@
-# C90 to MIPS Compiler
-This is a C90 (ANSI C) to MIPS compiler. The compiler uses Flex for the lexer, Bison for the parser and virtual functions for the assembly code generation.
+# C90 to MIPS I Compiler
+This is a C90 (ANSI C) to MIPS I compiler. The compiler uses Flex for the lexer, Bison for the parser and virtual functions for the assembly code generation.
 
-The repository also contains parser and lexer in separate directories under the `/src` directory. It also contains a plenty of test for all three programs. 
+The repository also contains parser and lexer in separate directories under the `/src` directory. It also contains a plenty of tests for all three programs. 
 
 More information on the design of the compiler can be seen in the [docs](/doc/README.md).
 
 ## Specification
-This piece of work was done in partial fulfilment of a language processors module. The specification for the coursework can be found [here](https://github.com/LangProc/langproc-2016-cw).
+This piece of work was done in partial fulfilment of a language processors module (EE2-15). The specification for the coursework can be found [here](https://github.com/LangProc/langproc-2016-cw).
 
 ### Currently implemented features
 
@@ -33,14 +33,14 @@ This piece of work was done in partial fulfilment of a language processors modul
 11 - [ ] Floating-point
 
 ## Building and Running
-This must be run on an environment with Flex and Bison installed, a [vagrant file](Vagrantfile) configured to the correct target environment has been included , run `vagrant up`, `vagrant ssh`, `cd /vagrant/` and finish with `exit`.
+It must be run on an environment with Flex and Bison installed, a [vagrant file](Vagrantfile) configured to the correct target environment has been included. To deploy the environment you can run `vagrant up`, `vagrant ssh`, `cd /vagrant/` and finish with `exit`.
 
 The compiler can built by doing:
 ```
 make bin/c_compiler
 ```
 
-The compiler accepts valid C code through `stdin` and will return MIPS code through `stdout`, for example, if we create a file `test.c` and we store it under `/test/c_compiler/test`:
+The compiler accepts valid C code through `stdin` and it will return MIPS 1 code through `stdout`, for example, if we create a file `test.c` and we store it under `/test/c_compiler/test`:
 ```C
 int main(){
   int j = 10;
@@ -113,7 +113,7 @@ $EXIT_FUNC1:
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.1) 5.4.0 20160609"
 ```
-which will also produce a pretty print XML structure of the AST:
+and it will also produce a pretty-print XML structure of the AST:
 
 ```xml
 <Program>
@@ -154,4 +154,4 @@ which will also produce a pretty print XML structure of the AST:
 ```
 
 ## Credits
-Martin Ferianc. 2017.
+- All code was written by Martin Ferianc in 2017.
